@@ -70,7 +70,7 @@ public class AuthorisationServiceImpl implements AuthorisationService {
     public ResponseVerification verification(String user, String password){
         ResponseVerification response = new ResponseVerification();
         Optional<User> listUser = userRepository.findById(Integer.parseInt(user));
-        if (listUser.get().getPassword().equals(password)) {
+        if ((listUser.isPresent()) && (listUser.get().getPassword().equals(password))) {
             currentUser = listUser.get();
             Area.listArea.addAll(areaRepository.findAll());
             Status.listStatus.addAll(statusRepository.findAll());

@@ -9,7 +9,6 @@ import java.util.List;
 
 @Repository
 public interface EquipmentRepository extends CrudRepository<Equipment, Integer> {
-    List<Equipment> findAll();
     @Query(value = "SELECT * from equipment e where e.category = :category", nativeQuery = true)
     List<Equipment> findAllByCategory(int category);
 
@@ -18,5 +17,5 @@ public interface EquipmentRepository extends CrudRepository<Equipment, Integer> 
             "order by e.name", nativeQuery = true)
     List<Equipment> findEquipmentInCategoryById(String id);
 
-    List<Equipment> findAllByName(String name);;
+    List<Equipment> findAllByName(String name);
 }

@@ -5,7 +5,6 @@ import aho.repository.*;
 import aho.response.*;
 import aho.response.form.FormAddRequest;
 import aho.response.form.FormEquipment;
-import aho.response.form.FormFiles;
 import aho.service.RequestAddService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +14,13 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -188,10 +187,11 @@ public class RequestAddServiceImpl implements RequestAddService {
         Status testStatus = new Status();
         testStatus.setName("Неопределено");
         Equipment testEquipmentL1 = null;
-        System.out.println(formAddRequest.getEquipmentL1());
-        testEquipmentL1 = equipmentRepository.findById(Integer.parseInt(formAddRequest.getEquipmentL1())).get();
+        Optional<Equipment> optionalCategory = equipmentRepository.findById(Integer.parseInt(formAddRequest.getEquipmentL1()));
+        if (optionalCategory.isPresent()) testEquipmentL1 = optionalCategory.get();
         Equipment testEquipmentL2 = null;
-        testEquipmentL2 = equipmentRepository.findById(Integer.parseInt(formAddRequest.getEquipmentL2())).get();
+        Optional<Equipment> optionalEquipment = equipmentRepository.findById(Integer.parseInt(formAddRequest.getEquipmentL2()));
+        if (optionalEquipment.isPresent()) testEquipmentL2 = optionalEquipment.get();
         Request request = null;
         if (formAddRequest.getRequestId().equals("0")){
             request = new Request();

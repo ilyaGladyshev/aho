@@ -1,6 +1,5 @@
 package aho.response;
 
-import aho.model.Equipment;
 import lombok.Data;
 
 import java.util.List;

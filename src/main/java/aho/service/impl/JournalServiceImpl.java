@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -35,7 +36,9 @@ public class JournalServiceImpl implements JournalService {
     private final StatusRepository statusRepository;
     private List<Request> getRequestList(FormJournal formJournal){
         List<Request> listRequest = null;
-        User currentUser = userRepository.findById(Integer.parseInt(formJournal.getCurrenUser())).get();
+        Optional<User> optionalUser =  userRepository.findById(Integer.parseInt(formJournal.getCurrenUser()));
+        User currentUser =null;
+        if (optionalUser.isPresent()) currentUser = optionalUser.get();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String query = "SELECT r from Request r ";
         String request = "";
