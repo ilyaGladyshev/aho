@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet"  href="/css/form.css">
+    <title>Карточка заявки: создание</title>
+</head>
+<body>
+<header>
+  <div class="form-logo"><h2>Карточка заявки</h2></div>
+</header>
+<main>
+  <table class="request-form">
+    <tr>
+      <td>
+        <div class="print-container">
+            <button id="itemSelectFiles">Прикрепить файлы</button>
+            <input type="file" id="idFileInput" multiple style="display:none;">
+        </div>
+      </td>
+      <td>
+        <div class="print-container" id="idStorageFiles">
+          <button id="itemStorageFiles">Просмотреть прикрепленные файлы</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <form id="dataRequest" class="form form_request" action="#" method="post" commonData-send="addRequest">
+  <table class="request_form">
+    <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 30%;">
+      <col style="width: 20%;">
+      <col style="width: 30%;">
+    </colgroup>
+    <tr>
+      <td>Дата создания заявки</td>
+      <td colspan="3">
+        <input class="input" type="date" id="itemDateRequest" name="dateRequest" placeholder="Дата создания заявки" disabled/>
+      </td>
+      </tr>
+    <tr>
+      <td>ФИО специалиста, создавшего заявку</td>
+      <td colspan="3">
+        <select name="FioCreator" class="select" id="itemFioCreator" placeholder="ФИО специалиста, создавшего заявку"></select>
+      </td>
+    </tr>
+    <tr>
+      <td>Наименование района</td>
+      <td colspan="3">
+        <select name="area"  class="select" id="itemArea" placeholder="Наименование района"></select>
+      </td>
+    </tr>
+    <tr>
+      <td>Группа</td>
+      <td colspan="3">
+        <select class="select" name="equipmentL1" id="itemEquipmentL1" placeholder="Группа"></select>
+      </td>
+    </tr>
+    <tr>
+      <td>Наименование</td>
+      <td id="tdEquipmentName">
+        <select class="select" name="equipmentL2" id="itemEquipmentL2" placeholder="Наименование"></select>
+      </td>
+      <td id="tdHeader">Прочее оборудование</td>
+      <td id="tdItem">
+        <input type="text" id="itemOther"  class="input" name="itemOther" placeholder="Прочее оборудование"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Примечание к наименованию(основные характеристики)</td>
+      <td colspan="3">
+        <input type="text" id="itemDescription"  class="input" name="itemDescription" placeholder="Примечание к наименованию"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Нормативное количество</td>
+      <td colspan="3">
+        <input type="number" id="itemNormativeCount" class="input" name="normativeCount" placeholder="Нормативное количество"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Количество в наличии</td>
+      <td colspan="3">
+        <input type="number" id="itemFactCount" class="input" name="factCount" placeholder="Количество в наличии"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Количество к списанию</td>
+      <td colspan="3">
+        <input type="number" id="itemSpisCount" class="input" name="spisCount" placeholder="Количество к списанию"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Планируемое количество</td>
+      <td colspan="3">
+        <input type="number" id="itemPlanedCount" class="input" name="planedCount" placeholder="Планируемое количество"/>
+      </td>
+    </tr>
+    <tr>
+      <td >Статус исполнения</td>
+      <td  colspan="3"><input  id="itemStatus" class="input" placeholder="Статус исполнения" disabled></td>
+    </tr>
+    <tr>
+      <td>ФИО специалиста, заполнившего статус</td>
+      <td colspan="3"><input id="itemFioStatus" class="input" placeholder="ФИО специалиста, заполнившего статус" disabled/></td>
+    </tr>
+    <tr>
+      <td>Комментарий к статусу</td>
+      <td colspan="3"><input name="commentController" id="itemCommentController"  class="input" disabled/></td>
+    </tr>
+    <tr>
+      <td colspan="4"><br><br></td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div class="horizontal-center">
+          <button class="form-button" type="submit">Записать данные</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+  </form>
+</main>
+<div id = "responseMessage"></div>
+<script src="/js/requestAdd.js"></script>
+</body>
+</html>

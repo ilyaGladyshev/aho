@@ -1,0 +1,105 @@
+.clear-button{
+    background-size: cover;
+    background-image: url("/img/cancel.jpg");
+    cursor:  pointer;
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+}
+
+.clear-button: hover{
+    background-color: #007bff;
+    color: #fff;
+}
+
+.clear-button: active{
+    border-color: #0056b3;
+ }
+
+.vertical-container{
+    margin-left: 50px;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    width: 60%;
+    border-radius: 5px;
+ }
+
+.horizontal-container{
+    display: flex;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    min-height: 30px;
+}
+
+.print-container{
+    display: flex;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    min-height: 30px;
+    flex-direction: row-reverse;
+}
+
+.fixed-block{
+    margin-right: 20px;
+    width: 200px;
+}
+
+.journal_table{
+    border-all: 1px solid #eee;
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+
+.filter-date{
+    border: 1px solid #eee;
+    table-layout: auto;
+    border-style: collapse;
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+
+td{
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.tdcol{
+    font-size: 6pt;
+}
+
+th{
+    border: 1px solid black;
+    padding: 5px;
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid #dddddd;
+    background: #efefef;
+}
+
+.main-tr:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.main-tr:nth-child(odd){
+    background-color: #fff;
+}
+.main-tr:nth-child(even){
+    background-color: lightgray;
+}
+
+@media print{
+    .vertical-container{
+        display: none;
+    }
+}

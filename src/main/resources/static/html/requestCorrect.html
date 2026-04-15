@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка заявки: корректировка</title>
+</head>
+<link rel="stylesheet"  href="/css/form.css?v=82368483">
+<body>
+<h2><div class="form-logo">Карточка заявки</div></h2>
+<table class="request-form">
+    <tr>
+        <td>
+            <div class="print-container">
+                <button id="itemStorageFiles">Просмотреть прикрепленные файлы</button>
+            </div>
+        </td>
+    </tr>
+</table>
+<table class="request_form">
+    <colgroup>
+        <col style="width: 40%;">
+        <col style="width: 60%;">
+    </colgroup>
+    <form id="dataRequest" class="form form_request" action="#" method="post" commonData-send="addRequest">
+        <tr>
+            <td>Дата создания заявки</td>
+            <td><input type="date" id="itemDateRequest" name="dateRequest" class="input"
+                       readonly="true" placeholder="Дата создания заявки" disabled/></td>
+        </tr>
+        <tr>
+            <td>ФИО специалиста, создавшего заявку</td>
+            <td><input name="FioCreator"  id="itemFioCreator" class="input"
+                       readonly="true" placeholder="ФИО специалиста, создавшего заявку"/></td>
+        </tr>
+        <tr>
+            <td>Номер района</td>
+            <td>
+                <input name="area" id="itemArea" class="input" readonly="true" placeholder="Номер района"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Группа</td>
+            <td><input name="equipmentL1" id="itemEquipmentL1" readonly="true" class="input"
+                       placeholder="Группа"/></td>
+        </tr>
+        <tr>
+            <td>Наименование</td>
+            <td><input name="equipmentL2" id="itemEquipmentL2" readonly="true" placeholder="Наименование" class="input"/></td>
+        </tr>
+        <tr>
+            <td>Примечание к наименованию(основные характеристики)</td>
+            <td><input type="text" id="itemDescription" name="itemDescription" class="input" readonly="true" placeholder="Примечание к наименованию"></td>
+        </tr>
+        <tr>
+            <td>Нормативное количество</td>
+            <td>
+                <input type="number" id="itemNormativeCount" class="input" name="normativeCount" placeholder="Нормативное количество"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Количество в наличии</td>
+            <td>
+                <input type="number" id="itemFactCount" class="input" name="factCount" placeholder="Количество в наличии"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Количество к списанию</td>
+            <td>
+                <input type="number" id="itemSpisCount" class="input" name="spisCount" placeholder="Количество к списанию"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Планируемое количество</td>
+            <td>
+                <input type="number" id="itemPlanedCount" class="input" name="planedCount" placeholder="Планируемое количество"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Статус исполнения</td>
+            <td><select name="status" id="itemStatus" class="select" placeholder="Статус исполнения"></select></td>
+        </tr>
+        <tr>
+            <td>ФИО специалиста, заполнившего статус</td>
+            <td><select name="fioStatus" id="itemFioStatus" class="select" placeholder="ФИО специалиста, заполнившего статус"></select></td>
+        </tr>
+        <tr>
+            <td>Комментарий к статусу</td>
+            <td><input name="commentController" id="itemCommentController" class="input"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><br><br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="horizontal-center">
+                    <button type="submit" class="form-button">Записать данные</button>
+                </div>
+            </td>
+        </tr>
+    </form>
+</table>
+<div id = "responseMessage"></div>
+<script src="/js/requestCorrect.js"></script>
+</body>
+</html>

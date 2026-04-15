@@ -1,0 +1,145 @@
+@font-face{font-family:"My-Font";
+      font-style:normal;
+      font-weight:900;
+      font-display:block;
+      src:url(../webfonts/MontserratAlternates-Thin.otf) format("woff2"),
+      url(../webfonts/MontserratAlternates-Thin.otf) format("truetype")
+      }.fa-solid,.fas{font-weight:900
+}
+
+@font-face{font-family:"Medium";
+      font-style:normal;
+      font-weight:900;
+      font-display:block;
+      src:url(../webfonts/MontserratAlternates-Medium.otf) format("woff2"),
+      url(../webfonts/MontserratAlternates-Medium.otf) format("truetype")
+      }.fa-solid,.fas{font-weight:900
+}
+
+.form-button{
+      background-color: 87CEEB;
+      color:  black;
+      border 1px solid #007bff;
+      padding: 8px 15px;
+      cursor:  pointer;
+      border-radius: 5px;
+      transition: background-color 03s ease, color 0.3 ease;
+}
+
+.print-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.form-button: hover{
+      background-color: #007bff;
+      color: #fff;
+}
+
+.form-button: active{
+      background-color: #0056b3;
+      border-color: #0056b3;
+ }
+
+.logo{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin-left: 50px;
+}
+
+.menu{
+      display: flex;
+      border: silver solid 2px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+
+.form-logo{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      margin-left: 15px;
+}
+
+.authorization-panel{
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      margin-left: 32%;
+      border: solid 2px silver;
+      border-radius: 5px;
+      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+
+.horizontal-center{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+}
+
+.text-block{
+      margin-right: 20px;
+}
+
+.fixed-text-block{
+      height: 19px;
+}
+
+.submit{
+      margin: 40px;
+}
+
+.input{
+      width: 95%;
+      height: 100%;
+}
+
+.select{
+      width: 96%;
+      height: 100%;
+}
+
+body{
+      background: linear-gradient(to right, #ffefba, #ffffff);
+      font-family: 'My-Font', 'Arial', sans-serif;
+}
+
+h1{
+      font-family: 'Medium', 'Arial', sans-serif;
+}
+
+h2{
+      font-family: 'Medium', 'Arial', sans-serif;
+}
+
+table {
+      border: 3px solid #C0C0C0;
+      table-layout: auto;
+      border-style: double;
+      width: 75%;
+      margin-bottom: 20px;
+      background: #efefef;
+}
+
+.request_form{
+      border: 3px solid #C0C0C0;
+      table-layout: auto;
+      border-style: double;
+      width: 75%;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+ }
+
+button: hover {
+      background-color: #0056b3;
+}
+
+button: active {
+      background-color: #004085;
+}

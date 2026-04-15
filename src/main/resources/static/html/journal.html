@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал регистрации</title>
+    <link rel="stylesheet"  href="/css/journal.css?v=82368483">
+    <link rel="stylesheet"  href="/css/form.css?v=82368483">
+</head>
+<body>
+<h2><div class="logo" id="itemLogo">Журнал регистрации заявок</div></h2>
+<div class="vertical-container">
+    <div class="print-container">
+        <div>
+            <button id="itemPrint" type="submit" onclick="window.print()">Вывод на печать</button>
+        </div>
+    </div>
+    <div class="horizontal-container">
+        <div class="text-block">Период с:</div>
+        <div class="text-block">
+            <input type="date" id="itemDateFrom" name="dateFrom" placeholder="Период создания заявки с"/>
+        </div>
+        <div class="fixed-block"></div>
+        <div class="text-block">Период по:</div>
+        <div class="text-block">
+            <input type="date" id="itemDateTo" name="dateTo" placeholder="Период создания заявки по"/>
+        </div>
+    </div>
+    <div class="horizontal-container">
+        <div class="fixed-block">ФИО специалиста, создавшего заявку:</div>
+        <div class="fixed-text-block">
+            <select name="fioCreator"  id="itemFioCreator" placeholder="ФИО специалиста, создавшего заявку"></select>
+        </div>
+        <button id="itemClearFioCreator" type="reset" class="clear-button"></button>
+    </div>
+    <div class="horizontal-container">
+        <div class="fixed-block">ФИО специалиста, проверившего заявку:</div>
+        <div class="fixed-text-block">
+            <select name="fioInspector"  id="itemFioInspector" placeholder="ФИО специалиста, проверившего заявку"></select>
+        </div>
+        <button id="itemClearFioInspector" type="reset" class="clear-button"></button>
+    </div>
+    <div class="horizontal-container">
+        <div class="fixed-block">Район</div>
+        <div class="fixed-text-block">
+            <select name="area"  id="itemArea" placeholder="Район" class="w-100 pt-1 pb-1"/></select>
+        </div>
+        <button id="itemClearArea" type="reset" class="clear-button"></button>
+    </div>
+    <div class="horizontal-container">
+        <div class="fixed-block">Группа:</div>
+        <div class="fixed-text-block">
+            <select name="equipmentL1"  id="itemEquipmentL1" placeholder="Группа оборудования:"></select>
+        </div>
+        <button id="itemClearEquipmentL1" type="reset" class="clear-button"></button>
+    </div>
+    <div class="horizontal-container">
+        <div class="fixed-block">Наименование:</div>
+        <div class="fixed-text-block">
+            <select name="equipmentL2"  id="itemEquipmentL2" placeholder="Наименование оборудования"></select>
+        </div>
+        <button id="itemClearEquipmentL2" type="reset" class="clear-button"></button>
+    </div>
+    <div class="horizontal-container">
+        <div class="fixed-block">Статус исполнения</div>
+        <div class="fixed-text-block">
+            <select name="area"  id="itemStatus" placeholder="Статус исполнения" class="w-100 pt-1 pb-1"/></select>
+        </div>
+        <button id="itemClearStatus" type="reset" class="clear-button"></button>
+    </div>
+</div>
+<table id = "itemTable" class="journal_table">
+    <thead>
+        <col style="width: 5%;">
+        <col style="width: 8%;">
+        <col style="width: 10%;">
+        <col style="width: 38%;">
+        <col style="width: 4%;">
+        <col style="width: 4%;">
+        <col style="width: 4%;">
+        <col style="width: 4%;">
+        <col style="width: 10%;">
+        <col style="width: 10%;">
+        <col style="width: 8%;">
+        <tr>
+            <td>Номер строки</td>
+            <td>Дата заявки</td>
+            <td>Район</td>
+            <td>Оборудование</td>
+            <td  class="tdcol">Нормативное количество</td>
+            <td  class="tdcol">Количество в наличии</td>
+            <td  class="tdcol">Количество к списанию</td>
+            <td  class="tdcol">Планируемое количество</td>
+            <td>Статус исполнения</td>
+            <td>Обработано пользователем</td>
+            <td>Дата обработки</td>
+        </tr>
+    </thead>
+    <tbody id = "tableBody">
+
+    </tbody>
+    <script src="/js/journal.js"></script>
+</table>
+</body>
+</html>
